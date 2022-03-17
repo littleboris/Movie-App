@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
-
-import Movie from "./components/Movie";
+import React, { useState, useEffect } from "react";
+import Search from "./components/Search";
+import Featured from "./components/Featured";
 import "./App.css";
 
 const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US&sort_by=popularity.desc&";
 
-const SEARCH_API =
-  "https://api.themoviedb.org/3/search/movie?api_key=55f00f23a2d0dbcacd5d1f51e7248eb6&query=";
-//"https://api.themoviedb.org/3/search/movie?&api_key=7dd175e8e4c6252ca5cf5e63ea198b53&query=";
-
-function App() {
+export default function App() {
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getMovies(FEATURED_API);
@@ -27,39 +22,16 @@ function App() {
       });
   };
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-
-    if (searchTerm) {
-      getMovies(SEARCH_API + searchTerm);
-
-      setSearchTerm("");
-    }
-  };
-
-  const handleOnChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
+  // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
+  // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
     <div>
       <header>
-        <form onSubmit={handleOnSubmit}>
-          <input
-            className="search"
-            type="search"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleOnChange}
-          />
-        </form>
+        <Search getMovies={getMovies} />
       </header>
-      <div className="movie-container">
-        {movies.length > 0 &&
-          movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-      </div>
+      <section>
+        <Featured movies={movies} />
+      </section>
     </div>
   );
 }
-
-export default App;
