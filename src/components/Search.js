@@ -21,7 +21,7 @@ export default function Search(props) {
   };
 
   return (
-    <div>
+    <div className="the-search">
       <form onSubmit={handleOnSubmit}>
         <input
           className="search"
