@@ -106,8 +106,8 @@ code {
 }
 
 .movie-over {
-  background-color: #fff;
-  color: #22254b;
+  background-color: rgba(53, 53, 53, 0.863);
+  color: #d1d1d1;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -132,9 +132,33 @@ code {
   border-radius: 5px;
   font-weight: bold;
   font-size: 14px;
+  width: 36px;
+}
+
+.tag.gold {
+  color: rgba(235, 210, 102, 0.877);
 }
 
 .tag.green {
+  color: rgba(173, 235, 102, 0.877);
+}
+
+.tag.lightgreen {
+  color: rgba(186, 248, 135, 0.829);
+}
+
+.tag.orange {
+  color: rgba(252, 152, 58, 0.829);
+}
+
+.tag.grape {
+  color: rgba(214, 103, 38, 0.829);
+}
+
+.tag.red {
+  color: rgba(209, 88, 72, 0.836);
+}
+/*.tag.green {
   color: rgb(0, 161, 0);
 }
 
@@ -144,4 +168,4 @@ code {
 
 .tag.red {
   color: rgb(252, 81, 58);
-}
+}*/
