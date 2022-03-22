@@ -53,6 +53,13 @@ header {
   outline: 0;
 }
 
+.the-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .the-search ::placeholder {
   color: rgba(207, 207, 207, 0.726);
 }
