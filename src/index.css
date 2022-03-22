@@ -60,6 +60,19 @@ header {
   justify-content: space-between;
 }
 
+.the-search li {
+  padding-left: 30px;
+}
+
+.the-search ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 60px;
+  padding-left: 46px;
+}
+
 .the-search ::placeholder {
   color: rgba(207, 207, 207, 0.726);
 }

@@ -22,9 +22,11 @@ export default function Search(props) {
 
   return (
     <div className="the-search">
-      <h1>Profile</h1>
-      <h1>Help</h1>
-      <h1>Contact</h1>
+      <ul>
+        <li>Home</li>
+        <li>Help</li>
+        <li>Contact</li>
+      </ul>
       <form onSubmit={handleOnSubmit}>
         <input
           className="search"
