@@ -1,4 +1,5 @@
 import React from "react";
+import "./Movie.css";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 //"https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US";

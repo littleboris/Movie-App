@@ -1,5 +1,6 @@
 import React from "react";
 import Movie from "./Movie";
+import "./Featured.css";
 
 export default function Featured(props) {
   return (

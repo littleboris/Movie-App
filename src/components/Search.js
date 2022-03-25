@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Search.css";
 
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?api_key=55f00f23a2d0dbcacd5d1f51e7248eb6&query=";
