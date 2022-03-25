@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./components/Search";
 import Featured from "./components/Featured";
-import "./App.css";
 import MovieModal from "./components/MovieModal";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";

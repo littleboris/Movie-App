@@ -1,36 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #3f3f3f;
-  color: white;
-  font-family: sans-serif;
-}
-
-.root {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  background-color: #313131;
-  padding: 1rem;
-  justify-content: flex-end;
-  display: flex;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .movie {
   width: 260px;
   margin: 1rem;
@@ -46,12 +13,6 @@ code {
   object-fit: cover;
   height: 350px;
   width: 100%;
-}
-
-.movie-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .movie:hover {
@@ -75,8 +36,8 @@ code {
 }
 
 .movie-over {
-  background-color: #fff;
-  color: #22254b;
+  background-color: rgba(53, 53, 53, 0.863);
+  color: #d1d1d1;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -101,18 +62,41 @@ code {
   border-radius: 5px;
   font-weight: bold;
   font-size: 14px;
+  width: 36px;
+}
+
+.tag.gold {
+  color: rgba(235, 210, 102, 0.877);
 }
 
 .tag.green {
-  color: rgb(0, 161, 0);
+  color: rgba(173, 235, 102, 0.877);
+}
+
+.tag.lightgreen {
+  color: rgba(186, 248, 135, 0.829);
 }
 
 .tag.orange {
-  color: rgb(255, 181, 43);
+  color: rgba(252, 152, 58, 0.829);
+}
+
+.tag.grape {
+  color: rgba(214, 103, 38, 0.829);
 }
 
 .tag.red {
-  color: rgb(252, 81, 58);
+  color: rgba(209, 88, 72, 0.836);
 }
 
-
+/*.tag.green {
+    color: rgb(0, 161, 0);
+  }
+  
+  .tag.orange {
+    color: rgb(255, 181, 43);
+  }
+  
+  .tag.red {
+    color: rgb(252, 81, 58);
+  }*/

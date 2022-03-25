@@ -1,0 +1,50 @@
+.search {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 2px solid #adadad71;
+  border-radius: 50px;
+  background-color: rgba(116, 116, 116, 0.589);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  margin-left: 0.4em;
+  /*background-image: url("https://openclipart.org/image/400px/324409");*/
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Grey_close_x.svg/1024px-Grey_close_x.svg.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  color: white;
+  transform: scale(0.6);
+}
+
+.search:focus {
+  outline: 0;
+}
+
+.the-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.the-search li {
+  padding-left: 30px;
+}
+
+.the-search ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 60px;
+  padding-left: 46px;
+}
+
+.the-search ::placeholder {
+  color: rgba(207, 207, 207, 0.726);
+}
