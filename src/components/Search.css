@@ -25,18 +25,18 @@
   outline: 0;
 }
 
-.the-search {
+.search-container {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
 
-.the-search li {
+.search-container li {
   padding-left: 30px;
 }
 
-.the-search ul {
+.search-container ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -45,6 +45,16 @@
   padding-left: 46px;
 }
 
-.the-search ::placeholder {
+.search-container::placeholder {
   color: rgba(207, 207, 207, 0.726);
+}
+
+@media screen and (max-width: 600px) {
+  .search-container ul {
+    display: none;
+  }
+
+  .search-container {
+  justify-content: center;
+}
 }

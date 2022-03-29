@@ -9,11 +9,6 @@ const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US&sort_by=popularity.desc&";
 
 export default function App() {
-  const movieModal = document.getElementById("movie-modal");
-  const movieInfo = document.getElementById("movie-info-container");
-  const modalCont = document.getElementById("modal-container");
-  const allMovies = document.getElementsByClassName("movie");
-
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -30,14 +25,21 @@ export default function App() {
   };
 
   useEffect(() => {
+    const movieModal = document.getElementById("movie-modal");
+    const movieInfo = document.getElementById("movie-info-container");
+    const modalCont = document.getElementById("modal-container");
+    const allMovies = document.getElementsByClassName("movie");
+
     for (let i = 0; i < allMovies.length; i++) {
       allMovies[i].addEventListener("click", () => {
-        movieInfo.innerHTML = `<div id="movie-info"> <h2>${movies[i].title}</h2>
-          <p>${movies[i].overview}</p>
-          <div id="rating-box"<h3>Rating: ${movies[i].vote_average}</h3></div></div>`;
+        movieInfo.innerHTML = `<h3>${movies[i].title}</h3><div id="movie-info"> 
+          <p>${movies[i].overview}</p></div>
+          <span id="rating-box">IMDB-rating: ${movies[i].vote_average}</span>`;
+
         movieModal.style.background = `url(${
           IMG_API + movies[i].poster_path
-        }) center / 100% no-repeat fixed`;
+        }) center center / cover no-repeat fixed`;
+
         modalCont.style.display = "flex";
       });
     }
