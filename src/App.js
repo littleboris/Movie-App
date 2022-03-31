@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Search from "./components/Search";
 import Featured from "./components/Featured";
 import MovieModal from "./components/MovieModal";
+import addFavourite from "./components/AddFavourite";
+import { GlobalProvider } from "./context/GlobalState";
 import Footer from "./components/Footer";
-import "./App.css";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -31,7 +32,8 @@ export default function App() {
     });
     modalCont.style.display = "flex";
   }
-
+  // MovieFavorite part
+  //
   useEffect(() => {
     getMovies(FEATURED_API);
   }, []);
@@ -48,24 +50,26 @@ export default function App() {
   // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
-    <main>
-      <header>
-        <Search getMovies={getMovies} />
-      </header>
-      <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
-      <section>
-        <Featured
-          movies={movies}
-          handleClickedMovie={handleClickedMovie}
-          IMG_API={IMG_API}
-        />
-      </section>
-      <section>
-        <div className="page-container">
-          <div className="content-wrap"></div>
-        </div>
-        <Footer />
-      </section>
-    </main>
+    <GlobalProvider>
+      <main>
+        <header>
+          <Search getMovies={getMovies} />
+        </header>
+        <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
+        <section>
+          <Featured
+            movies={movies}
+            handleClickedMovie={handleClickedMovie}
+            IMG_API={IMG_API}
+          />
+        </section>
+        <footer>
+          <div className="page-container">
+            <div className="content-wrap"></div>
+          </div>
+          <Footer />
+        </footer>
+      </main>
+    </GlobalProvider>
   );
 }
