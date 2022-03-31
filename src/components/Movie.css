@@ -37,6 +37,7 @@
 }
 
 .movie-over {
+  cursor: default;
   background-color: rgba(53, 53, 53, 0.863);
   color: #d1d1d1;
   padding: 1rem;
@@ -96,14 +97,9 @@
   right: 10px;
 }
 
-/*.tag.green {
-    color: rgb(0, 161, 0);
-  }
-  
-  .tag.orange {
-    color: rgb(255, 181, 43);
-  }
-  
-  .tag.red {
-    color: rgb(252, 81, 58);
-  }*/
+#favourite-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
