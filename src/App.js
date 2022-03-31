@@ -15,7 +15,13 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [clickedMovie, setClickedMovie] = useState([]);
 
-  function handleClickedMovie(title, poster_path, vote_average, overview, setVoteClass) {
+  function handleClickedMovie(
+    title,
+    poster_path,
+    vote_average,
+    overview,
+    setVoteClass
+  ) {
     setClickedMovie({
       title: title,
       poster_path: poster_path,
@@ -56,8 +62,7 @@ export default function App() {
       </section>
       <section>
         <div className="page-container">
-          <div className="content-wrap">
-          </div>
+          <div className="content-wrap"></div>
         </div>
         <Footer />
       </section>
