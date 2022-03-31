@@ -1,4 +1,4 @@
-.modal-container {
+#modal-container {
   height: 100%;
   width: 100%;
   background-color: rgba(94, 94, 94, 0.74);
@@ -13,72 +13,107 @@
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 #movie-modal {
-  height: 80vh;
+  height: 90vh;
   width: 80vw;
-  border-radius: 10px;
-  position: relative;
+  border-radius: 1rem;
 }
 
-#movie-info-container {
-  font-size: 25px;
+#modal-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  height: 80%;
-}
-
-#movie-info-container h3 {
-  padding: 0;
-  margin: 0;
-}
-
-#movie-info {
+  height: 100%;
   color: rgb(255, 255, 255);
-  padding-right: 10%;
-  padding-left: 10%;
+
   overflow: auto;
-  margin-bottom: 20px;
+  position: relative;
+  font-size: 1.3rem;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+#modal-info p {
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+  height: 20rem;
+  overflow: auto;
 }
 
 #rating-box {
+  text-align: center;
+  width: 3.6rem;
+  font-size: 1.6rem;
   position: absolute;
-  bottom: 10px;
+  top: 1rem;
+  right: 1rem;
   font-weight: bold;
-  font-size: 25px;
 }
 
 #return-btn {
-  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.4rem;
   font-weight: bold;
-  margin: 20px;
-  z-index: 4;
+  margin: 2rem;
   color: black;
-  height: 40px;
-  width: 100px;
+  height: 2.8rem;
+  width: 10rem;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255);
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
 }
 
 #return-btn:hover {
-  background-color: black;
+  background-color: rgb(43, 43, 43);
   color: rgba(255, 255, 255, 0.9);
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+.tag {
+  background-color: #464646;
+  padding: 0.5rem;
+}
+
+.tag.gold {
+  color: rgba(235, 210, 102, 0.877);
+}
+
+.tag.green {
+  color: rgba(173, 235, 102, 0.877);
+}
+
+.tag.lightgreen {
+  color: rgba(186, 248, 135, 0.829);
+}
+
+.tag.orange {
+  color: rgba(252, 152, 58, 0.829);
+}
+
+.tag.grape {
+  color: rgba(214, 103, 38, 0.829);
+}
+
+.tag.red {
+  color: rgba(209, 88, 72, 0.836);
 }
 
 @media screen and (min-width: 600px) {
-  #movie-info-container {
-    font-size: 22px;
-  }
-
   #movie-modal {
     height: 90vh;
-    width: 90vw;
+    width: 60vw;
+  }
+
+  #modal-info h1 {
+    margin: 0;
+  }
+
+  #return-btn {
+    margin-top: 1rem;
   }
 }
