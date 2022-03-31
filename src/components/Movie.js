@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Movie.css";
+import "./AddFavourite";
+import AddFavourite from "./AddFavourite";
+import { GlobalContext } from "../context/GlobalState";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 //"https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US";
@@ -24,8 +27,13 @@ const setVoteClass = (vote) => {
 };
 
 const Movie = ({ title, poster_path, overview, vote_average }) => {
+  const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
+
+  let storedMovie = watchlist.find((o) => o.id === title.id);
+
+  const watchlistDisabled = storedMovie ? true : false;
   return (
-    <div className="movie">
+    <div onClick={() => addMovieToWatchlist(title)} className="movie">
       <img
         src={
           poster_path
@@ -43,10 +51,10 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
           {vote_average}
         </span>
       </div>
-
       <div className="movie-over">
         <h2>{title}</h2>
         <p>{overview}</p>
+        <button>{<AddFavourite />}</button>
       </div>
     </div>
   );

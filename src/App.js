@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Search from "./components/Search";
 import Featured from "./components/Featured";
 import MovieModal from "./components/MovieModal";
+import addFavourite from "./components/AddFavourite";
+import { GlobalProvider } from "./context/GlobalState";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -15,7 +17,8 @@ export default function App() {
   const allMovies = document.getElementsByClassName("movie");
 
   const [movies, setMovies] = useState([]);
-
+  // MovieFavorite part
+  //
   useEffect(() => {
     getMovies(FEATURED_API);
   }, []);
@@ -46,14 +49,16 @@ export default function App() {
   // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
-    <div>
-      <header>
-        <Search getMovies={getMovies} />
-      </header>
-      <MovieModal movies={movies} />
-      <section>
-        <Featured movies={movies} />
-      </section>
-    </div>
+    <GlobalProvider>
+      <div>
+        <header>
+          <Search getMovies={getMovies} />
+        </header>
+        <MovieModal movies={movies} />
+        <section>
+          <Featured movies={movies} />
+        </section>
+      </div>
+    </GlobalProvider>
   );
 }

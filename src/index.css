@@ -55,7 +55,7 @@ code {
 }
 
 .movie:hover {
-  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .movie-info {
@@ -114,5 +114,3 @@ code {
 .tag.red {
   color: rgb(252, 81, 58);
 }
-
-
