@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Search from "./components/Search";
 import Featured from "./components/Featured";
 import MovieModal from "./components/MovieModal";
+import Footer from "./components/Footer";
+import "./App.css";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -53,6 +55,13 @@ export default function App() {
       <MovieModal movies={movies} />
       <section>
         <Featured movies={movies} />
+      </section>
+      <section>
+        <div className="page-container">
+          <div className="content-wrap">
+          </div>
+        </div>
+        <Footer />
       </section>
     </div>
   );

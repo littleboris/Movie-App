@@ -1,0 +1,29 @@
+.main-footer{
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+    background-color: #242526;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+.row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.row2{
+    text-align: center;
+}
+
+.row ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }

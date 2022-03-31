@@ -1,0 +1,11 @@
+.page-container {
+    display: flex;
+    flex-direction: colum;
+    min-height: 50vh;
+    
+}
+
+.content-wrap{
+    flex:1;
+    
+}
