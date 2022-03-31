@@ -25,12 +25,12 @@ const Movie = ({
   handleClickedMovie,
   IMG_API,
 }) => {
-  
+
   return (
     <div
       className="movie"
       onClick={() =>
-        handleClickedMovie(title, poster_path, vote_average, overview, setVoteClass)
+        handleClickedMovie(title, poster_path, vote_average, overview)
       }
     >
       <img

@@ -44,8 +44,7 @@ export default function MovieModal(props) {
 
             <span
               id="rating-box"
-              className={`tag ${setVoteClass(movie.vote_average)}`}
-            >
+              className={`tag ${setVoteClass(movie.vote_average)}`}>
               {movie.vote_average}
             </span>
             <button id="return-btn" onClick={handleReturn}>
