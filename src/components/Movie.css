@@ -16,8 +16,12 @@
 }
 
 .movie:hover {
+<<<<<<< HEAD
   transform: scale(1.05);
   cursor: pointer;
+=======
+  transform: scale(1.0);
+>>>>>>> 28756f20816a542fc5ddf0ddd3415530c8c8205c
 }
 
 .movie-info {

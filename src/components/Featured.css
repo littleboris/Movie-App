@@ -3,3 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.featured-section h1 {
+  text-align: center;
+}

@@ -12,7 +12,6 @@ export default function Search(props) {
 
     if (searchTerm) {
       props.getMovies(SEARCH_API + searchTerm);
-
       setSearchTerm("");
     }
   };
@@ -22,7 +21,7 @@ export default function Search(props) {
   };
 
   return (
-    <div className="the-search">
+    <div className="search-container">
       <ul>
         <li>Home</li>
         <li>Help</li>

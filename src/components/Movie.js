@@ -4,12 +4,6 @@ import "./AddFavourite";
 import AddFavourite from "./AddFavourite";
 import { GlobalContext } from "../context/GlobalState";
 
-const IMG_API = "https://image.tmdb.org/t/p/w1280";
-//"https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US";
-
-// let clickedMovie = [];
-// const allMovies = document.getElementsByClassName("movie");
-
 const setVoteClass = (vote) => {
   if (vote >= 8) {
     return "gold";
@@ -26,6 +20,7 @@ const setVoteClass = (vote) => {
   }
 };
 
+<<<<<<< HEAD
 const Movie = ({ title, poster_path, overview, vote_average }) => {
   const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
 
@@ -34,6 +29,24 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
   const watchlistDisabled = storedMovie ? true : false;
   return (
     <div onClick={() => addMovieToWatchlist(title)} className="movie">
+=======
+const Movie = ({
+  title,
+  poster_path,
+  overview,
+  vote_average,
+  handleClickedMovie,
+  IMG_API,
+}) => {
+
+  return (
+    <div
+      className="movie"
+      onClick={() =>
+        handleClickedMovie(title, poster_path, vote_average, overview)
+      }
+    >
+>>>>>>> 28756f20816a542fc5ddf0ddd3415530c8c8205c
       <img
         src={
           poster_path
@@ -45,9 +58,7 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
       <div className="movie-info">
         <h3>{title}</h3>
         <span
-          className={`tag ${setVoteClass(vote_average)}
-      `}
-        >
+          className={`tag ${setVoteClass(vote_average)}`}>
           {vote_average}
         </span>
       </div>

@@ -1,42 +1,67 @@
 import React from "react";
 import "./MovieModal.css";
+import "./Movie.css";
 
-// const IMG_API = "https://image.tmdb.org/t/p/w1280";
+const setVoteClass = (vote) => {
+  if (vote >= 8) {
+    return "gold";
+  } else if (vote >= 7) {
+    return "green";
+  } else if (vote >= 6) {
+    return "lightgreen";
+  } else if (vote >= 5) {
+    return "orange";
+  } else if (vote >= 4) {
+    return "grape";
+  } else {
+    return "red";
+  }
+};
 
 export default function MovieModal(props) {
-  // const movieModal = document.getElementById("movie-modal");
-  // const movieInfo = document.getElementById("movie-info");
+  const movie = props.movie;
   const modalCont = document.getElementById("modal-container");
-  // const allMovies = document.getElementsByClassName("movie");
-
-  // console.log(props.movies);
+  console.log(movie.setVoteClass);
 
   const handleReturn = () => {
     modalCont.style.display = "none";
   };
 
-  // const displayModal = () => {
-  //   for (let i = 0; i < allMovies.length; i++) {
-  //     movieInfo.innerHTML = `<h2>${props.movies[i].title}</h2>
-  //        <p>${props.movies[i].overview}</p>
-  //         <h3>Rating: ${props.movies[i].vote_average}</h3>`;
-  //     movieModal.style.background = `url(${
-  //       IMG_API + props.movies[i].poster_path
-  //     }) center / 100vh`;
-  //     document.getElementById("modal-container").style.display = "flex";
-  //   }
-  // };
-
   return (
-    <div className="modal-container" id="modal-container">
-      <div id="movie-modal">
+    <section id="modal-container">
+      <div
+        id="movie-modal"
+        style={{
+          background: `url(${
+            props.IMG_API + movie.poster_path
+          }) center center / cover no-repeat fixed`,
+        }}
+      >
         <div className="modal-overlay">
-          <button id="return-btn" onClick={handleReturn}>
-            Return
-          </button>
-          <div id="movie-info-container"></div>
+          <div id="modal-info">
+            <h1>{movie.title}</h1>
+            <p>{movie.overview}</p>
+
+            <span
+              id="rating-box"
+              className={`tag ${setVoteClass(movie.vote_average)}`}>
+              {movie.vote_average}
+            </span>
+            <button id="return-btn" onClick={handleReturn}>
+              Return
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+/* <span className=`tag`>Rating: {movie.vote_average}</span> */
+
+//    <span
+//      className={`tag ${movie.setVoteClass(movie.vote_average)}
+// `}
+//    >
+//      {movie.vote_average}
+//    </span>;
