@@ -2,10 +2,12 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Watchlist from "./Pages/Watchlist";
+import { GlobalProvider } from "./context/GlobalState";
 
 export default function App() {
   return (
-    <div>
+    //Always wrap GlobalProvider in app.js and not in components
+    <GlobalProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -13,6 +15,6 @@ export default function App() {
           <Route path="/Watchlist" element={<Watchlist />} />
         </Routes>
       </Router>
-    </div>
+    </GlobalProvider>
   );
 }

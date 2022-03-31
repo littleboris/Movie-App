@@ -11,6 +11,16 @@ export default (state, action) => {
           ...state,
           watchlist: [action.payload, ...state.watchlist],
         };
+
+    case "REMOVE_MOVIE_FROM_WATCHLIST":
+      // action.payload Is the movie i click on
+
+      return {
+        ...state,
+        watchlist: state.watchlist.filter(
+          (movie) => movie.title !== action.payload.title
+        ),
+      };
     default:
       return state;
   }

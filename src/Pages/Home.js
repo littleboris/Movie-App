@@ -49,26 +49,24 @@ export default function App() {
   // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
-    <GlobalProvider>
-      <main>
-        <header>
-          <Search getMovies={getMovies} />
-        </header>
-        <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
-        <section>
-          <Featured
-            movies={movies}
-            handleClickedMovie={handleClickedMovie}
-            IMG_API={IMG_API}
-          />
-        </section>
-        <footer>
-          <div className="page-container">
-            <div className="content-wrap"></div>
-          </div>
-          <Footer />
-        </footer>
-      </main>
-    </GlobalProvider>
+    <main>
+      <header>
+        <Search getMovies={getMovies} />
+      </header>
+      <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
+      <section>
+        <Featured
+          movies={movies}
+          handleClickedMovie={handleClickedMovie}
+          IMG_API={IMG_API}
+        />
+      </section>
+      <footer>
+        <div className="page-container">
+          <div className="content-wrap"></div>
+        </div>
+        <Footer />
+      </footer>
+    </main>
   );
 }

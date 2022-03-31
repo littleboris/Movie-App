@@ -3,9 +3,8 @@ import { GlobalContext } from "../context/GlobalState";
 import Movie from "../components/Movie";
 
 export default function Watchlist() {
-  const watchlist = localStorage.getItem("watchlist")
-    ? JSON.parse(localStorage.getItem("watchlist"))
-    : [];
+  const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
+
   console.log(watchlist);
   return (
     <div className="movie-page">
@@ -16,7 +15,15 @@ export default function Watchlist() {
         {watchlist.length > 0 ? (
           <div className="movie-grid">
             {watchlist.map((movie) => (
-              <Movie {...movie} key={movie.title} />
+              <div key={movie.title} className="remove-btn-container">
+                <button
+                  className="remove-btn"
+                  onClick={() => removeMovieFromWatchlist(movie)}
+                >
+                  X
+                </button>
+                <Movie {...movie} />
+              </div>
             ))}
           </div>
         ) : (
