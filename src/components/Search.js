@@ -25,7 +25,7 @@ export default function Search(props) {
       <ul>
         <li>Home</li>
         <li>Help</li>
-        <li>Contact</li>
+        <li>Favorites</li>
       </ul>
       <form onSubmit={handleOnSubmit}>
         <input

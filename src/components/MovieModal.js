@@ -57,11 +57,3 @@ export default function MovieModal(props) {
   );
 }
 
-/* <span className=`tag`>Rating: {movie.vote_average}</span> */
-
-//    <span
-//      className={`tag ${movie.setVoteClass(movie.vote_average)}
-// `}
-//    >
-//      {movie.vote_average}
-//    </span>;

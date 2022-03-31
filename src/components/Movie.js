@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Movie.css";
+import "./AddFavourite";
+import AddFavourite from "./AddFavourite";
+import { GlobalContext } from "../context/GlobalState";
 
 const setVoteClass = (vote) => {
   if (vote >= 8) {
@@ -17,14 +20,16 @@ const setVoteClass = (vote) => {
   }
 };
 
-const Movie = ({
-  title,
-  poster_path,
-  overview,
-  vote_average,
-  handleClickedMovie,
-  IMG_API,
-}) => {
+const Movie = ({ title, poster_path, overview, vote_average, handleClickedMovie,
+  IMG_API }) => {
+  const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
+
+  let storedMovie = watchlist.find((o) => o.id === title.id);
+
+  const watchlistDisabled = storedMovie ? true : false;
+    
+
+      // Ska sättas till hjärtat: <div onClick={() => addMovieToWatchlist(title)} className="movie"></div>
 
   return (
     <div
@@ -51,6 +56,7 @@ const Movie = ({
       <div className="movie-over">
         <h2>{title}</h2>
         <p>{overview}</p>
+        <button>{<AddFavourite />}</button>
       </div>
     </div>
   );
