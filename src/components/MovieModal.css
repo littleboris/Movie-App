@@ -4,7 +4,7 @@
   background-color: rgba(94, 94, 94, 0.74);
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   display: none;
   justify-content: center;
   align-items: center;

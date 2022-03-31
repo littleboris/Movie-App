@@ -7,7 +7,14 @@ export default function Featured(props) {
   // let contentStatus;
 
   if (props.movies.length > 0) {
-    content = props.movies.map((movie) => <Movie key={movie.id} {...movie} handleClickedMovie={props.handleClickedMovie} IMG_API={props.IMG_API} />);
+    content = props.movies.map((movie) => (
+      <Movie
+        key={movie.id}
+        {...movie}
+        handleClickedMovie={props.handleClickedMovie}
+        IMG_API={props.IMG_API}
+      />
+    ));
   } else {
     content = "Can't find that movie, please search again.";
   }
