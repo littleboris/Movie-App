@@ -1,6 +1,5 @@
 import React from "react";
 import "./MovieModal.css";
-import "./Movie.css";
 
 const setVoteClass = (vote) => {
   if (vote >= 8) {
