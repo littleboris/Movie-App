@@ -15,7 +15,13 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [clickedMovie, setClickedMovie] = useState([]);
 
-  function handleClickedMovie(title, poster_path, vote_average, overview, setVoteClass) {
+  function handleClickedMovie(
+    title,
+    poster_path,
+    vote_average,
+    overview,
+    setVoteClass
+  ) {
     setClickedMovie({
       title: title,
       poster_path: poster_path,
@@ -42,7 +48,7 @@ export default function App() {
   // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
-    <div>
+    <main>
       <header>
         <Search getMovies={getMovies} />
       </header>
@@ -56,11 +62,10 @@ export default function App() {
       </section>
       <section>
         <div className="page-container">
-          <div className="content-wrap">
-          </div>
+          <div className="content-wrap"></div>
         </div>
         <Footer />
       </section>
-    </div>
+    </main>
   );
 }
