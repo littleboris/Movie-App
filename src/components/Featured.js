@@ -3,10 +3,23 @@ import Movie from "./Movie";
 import "./Featured.css";
 
 export default function Featured(props) {
+  let content;
+  // let contentStatus;
+
+  if (props.movies.length > 0) {
+    content = props.movies.map((movie) => <Movie key={movie.id} {...movie} handleClickedMovie={props.handleClickedMovie} IMG_API={props.IMG_API} />);
+  } else {
+    content = "Can't find that movie, please search again.";
+  }
+
   return (
-    <div className="movie-container">
-      {props.movies.length > 0 &&
-        props.movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-    </div>
+    <section className="featured-section">
+      <div className="movie-container">{content}</div>
+    </section>
   );
 }
+
+//  {
+//         props.movies.length > 0 &&
+//           props.movies.map((movie) => <Movie key={movie.id} {...movie} />)
+//         }

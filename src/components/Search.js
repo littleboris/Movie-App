@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Search.css";
+import Featured from "./Featured";
 
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?api_key=55f00f23a2d0dbcacd5d1f51e7248eb6&query=";
@@ -12,7 +13,6 @@ export default function Search(props) {
 
     if (searchTerm) {
       props.getMovies(SEARCH_API + searchTerm);
-
       setSearchTerm("");
     }
   };
@@ -22,7 +22,7 @@ export default function Search(props) {
   };
 
   return (
-    <div className="the-search">
+    <div className="search-container">
       <ul>
         <li>Home</li>
         <li>Help</li>

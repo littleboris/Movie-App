@@ -1,12 +1,6 @@
 import React from "react";
 import "./Movie.css";
 
-const IMG_API = "https://image.tmdb.org/t/p/w1280";
-//"https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US";
-
-// let clickedMovie = [];
-// const allMovies = document.getElementsByClassName("movie");
-
 const setVoteClass = (vote) => {
   if (vote >= 8) {
     return "gold";
@@ -23,9 +17,22 @@ const setVoteClass = (vote) => {
   }
 };
 
-const Movie = ({ title, poster_path, overview, vote_average }) => {
+const Movie = ({
+  title,
+  poster_path,
+  overview,
+  vote_average,
+  handleClickedMovie,
+  IMG_API,
+}) => {
+  
   return (
-    <div className="movie">
+    <div
+      className="movie"
+      onClick={() =>
+        handleClickedMovie(title, poster_path, vote_average, overview, setVoteClass)
+      }
+    >
       <img
         src={
           poster_path
@@ -37,13 +44,10 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
       <div className="movie-info">
         <h3>{title}</h3>
         <span
-          className={`tag ${setVoteClass(vote_average)}
-      `}
-        >
+          className={`tag ${setVoteClass(vote_average)}`}>
           {vote_average}
         </span>
       </div>
-
       <div className="movie-over">
         <h2>{title}</h2>
         <p>{overview}</p>
