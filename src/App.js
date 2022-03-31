@@ -1,8 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
-import Reports from "./Pages/Reports";
+import Watchlist from "./Pages/Watchlist";
 
 export default function App() {
   return (
@@ -11,8 +10,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/Watchlist" element={<Watchlist />} />
         </Routes>
       </Router>
     </div>

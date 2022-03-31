@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import Movie from "./Movie";
+import Movie from "../components/Movie";
 
 export default function Watchlist() {
-  const { watchlist } = useContext(GlobalContext);
+  const watchlist = localStorage.getItem("watchlist")
+    ? JSON.parse(localStorage.getItem("watchlist"))
+    : [];
+  console.log(watchlist);
   return (
     <div className="movie-page">
       <div className="container">
@@ -13,7 +16,7 @@ export default function Watchlist() {
         {watchlist.length > 0 ? (
           <div className="movie-grid">
             {watchlist.map((movie) => (
-              <MovieCard movie={movie} type="watchlist" />
+              <Movie {...movie} key={movie.title} />
             ))}
           </div>
         ) : (

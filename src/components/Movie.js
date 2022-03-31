@@ -38,7 +38,18 @@ const Movie = ({
 
   return (
     <main>
-      <div className="movie" onClick={() => addMovieToWatchlist(title)}>
+      <div
+        className="movie"
+        onClick={() =>
+          addMovieToWatchlist({
+            title,
+            poster_path,
+            overview,
+            vote_average,
+            IMG_API,
+          })
+        }
+      >
         <img
           onClick={() =>
             handleClickedMovie(title, poster_path, vote_average, overview)
@@ -61,11 +72,6 @@ const Movie = ({
           <p>{overview}</p>
           <button id="favourite-btn">{<AddFavourite />}</button>
         </div>
-      </div>
-      <div className="movie-over">
-        <h2>{title}</h2>
-        <p>{overview}</p>
-        <button>{<AddFavourite />}</button>
       </div>
     </main>
   );

@@ -1,8 +1,10 @@
 export default (state, action) => {
   switch (action.type) {
     case "ADD_MOVIE_TO_WATCHLIST":
-      //console.log("hej");
-      if (state.watchlist.includes(action.payload)) {
+      // action.payload Is the movie i click on
+      if (
+        state.watchlist.find((movie) => movie.title === action.payload.title)
+      ) {
         return state;
       } else
         return {
