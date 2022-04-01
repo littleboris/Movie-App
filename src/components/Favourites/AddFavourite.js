@@ -11,7 +11,7 @@ const addFavourite = () => {
         width="18"
         height="18"
         border="3px solid red"
-        fill="White"
+        fill="red"
         viewBox="0 0 16 16"
         cursor="pointer"
       >
