@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import Movie from "../components/Movie";
+import "../Pages/Watchlist.css";
 
 export default function Watchlist() {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
@@ -16,12 +17,12 @@ export default function Watchlist() {
           <div className="movie-grid">
             {watchlist.map((movie) => (
               <div key={movie.title} className="remove-btn-container">
-                <button
+                <i
                   className="remove-btn"
                   onClick={() => removeMovieFromWatchlist(movie)}
                 >
                   X
-                </button>
+                </i>
                 <Movie {...movie} />
               </div>
             ))}

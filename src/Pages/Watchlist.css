@@ -1,0 +1,28 @@
+.remove-btn-container {
+  position: relative;
+}
+.movie-grid button {
+  display: none;
+}
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.remove-btn {
+  background-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  right: -5px;
+  top: 0px;
+  z-index: 5;
+  transition: 0.5s;
+}
+.remove-btn:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
