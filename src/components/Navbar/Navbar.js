@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
@@ -11,6 +10,10 @@ export default function Navbar(props) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
+  };
+
+  const reloadMainPage = () => {
+    window.location.reload();
   };
 
   return (
@@ -30,7 +33,7 @@ export default function Navbar(props) {
 
             {SidebarData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
+                <li onClick={reloadMainPage} key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
                     <span>{item.title}</span>
