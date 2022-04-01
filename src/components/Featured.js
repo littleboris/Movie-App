@@ -4,6 +4,7 @@ import "./styles/Featured.css";
 
 export default function Featured(props) {
   let content;
+  let cantFind;
   // let contentStatus;
 
   if (props.movies.length > 0) {
@@ -16,11 +17,12 @@ export default function Featured(props) {
       />
     ));
   } else {
-    content = "Can't find that movie, please search again.";
+    cantFind = "Can't find that movie, please search again.";
   }
 
   return (
     <section className="featured-section">
+      <p id="cant-find">{cantFind}</p>
       <div className="movie-container">{content}</div>
     </section>
   );
