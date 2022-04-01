@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import "./Movie.css";
-import "./AddFavourite";
-import AddFavourite from "./AddFavourite";
+import "./styles/Movie.css";
+import "./Favourites/AddFavourite";
+import AddFavourite from "./Favourites/AddFavourite";
 import { GlobalContext } from "../context/GlobalState";
 
 const setVoteClass = (vote) => {

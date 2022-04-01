@@ -50,9 +50,7 @@ export default function App() {
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
     <main>
-      <header>
-        <Search getMovies={getMovies} />
-      </header>
+      <Search getMovies={getMovies} />
       <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
       <section>
         <Featured

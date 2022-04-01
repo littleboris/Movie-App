@@ -1,9 +1,9 @@
 import React from "react";
-import "./Footer.css";
+import "./styles/Footer.css";
 
 const Footer = () => {
   return (
-    <div className="main-footer">
+    <footer className="main-footer">
       <div className="container">
         <div className="row">
           {/* Colum1 */}
@@ -43,7 +43,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

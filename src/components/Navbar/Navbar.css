@@ -4,18 +4,21 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  position: relative;
 }
 
 #navbar-container {
-  position:relative;
-z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  margin-left: 1.4rem;
   font-size: 2rem;
   background: none;
+  position: fixed;
+  top: 1.4rem;
+  z-index: 2;
 }
 
 .nav-menu {
@@ -31,7 +34,6 @@ z-index: 1;
 }
 
 .nav-menu.active {
-  
   left: 0;
   transition: 350ms;
 }

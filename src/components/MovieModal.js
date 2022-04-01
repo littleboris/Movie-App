@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieModal.css";
+import "./styles/MovieModal.css";
 
 const setVoteClass = (vote) => {
   if (vote >= 8) {
@@ -43,7 +43,8 @@ export default function MovieModal(props) {
 
             <span
               id="rating-box"
-              className={`tag ${setVoteClass(movie.vote_average)}`}>
+              className={`tag ${setVoteClass(movie.vote_average)}`}
+            >
               {movie.vote_average}
             </span>
             <button id="return-btn" onClick={handleReturn}>
@@ -55,4 +56,3 @@ export default function MovieModal(props) {
     </section>
   );
 }
-

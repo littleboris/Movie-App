@@ -4,7 +4,7 @@
   background-color: rgba(94, 94, 94, 0.74);
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   display: none;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,6 @@
   align-items: center;
   height: 100%;
   color: rgb(255, 255, 255);
-
   overflow: auto;
   position: relative;
   font-size: 1.3rem;
