@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -7,9 +7,9 @@
 }
 
 #navbar-container {
-position: sticky;
-top: 0;
-z-index:1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .menu-bars {
@@ -18,11 +18,11 @@ z-index:1;
   background: none;
   position: fixed;
   top: 1.4rem;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .nav-menu {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -68,7 +68,7 @@ z-index:1;
 }
 
 .navbar-toggle {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   width: 100%;
   height: 80px;
   display: flex;
