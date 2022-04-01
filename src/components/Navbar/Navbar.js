@@ -6,9 +6,12 @@ import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  console.log(props);
   const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => {
+    setSidebar(!sidebar);
+  };
 
   return (
     <main id="navbar-container">
@@ -18,13 +21,13 @@ export default function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
+
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
-              </Link>
+              <Link to="#" className="menu-bars"></Link>
             </li>
+
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>

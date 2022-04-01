@@ -19,12 +19,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  background-color: #313131;
-  padding: 1rem;
-  justify-content: flex-end;
-  display: flex;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

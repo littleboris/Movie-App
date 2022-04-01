@@ -1,6 +1,6 @@
 import React from "react";
 import Movie from "./Movie";
-import "./Featured.css";
+import "./styles/Featured.css";
 
 export default function Featured(props) {
   let content;

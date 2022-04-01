@@ -7,7 +7,7 @@ export default function Watchlist() {
 
   console.log(watchlist);
   return (
-    <div className="movie-page">
+    <article className="movie-page">
       <div className="container">
         <div className="header">
           <h1 className="heading">My Watchlist</h1>
@@ -30,6 +30,6 @@ export default function Watchlist() {
           <h2 className="no-movies">No movies in your watchlist, add some!</h2>
         )}
       </div>
-    </div>
+    </article>
   );
 }

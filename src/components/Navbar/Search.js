@@ -6,7 +6,7 @@ const SEARCH_API =
 
 export default function Search(props) {
   const [searchTerm, setSearchTerm] = useState("");
-
+  console.log(props.getMovies);
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
@@ -22,7 +22,7 @@ export default function Search(props) {
   };
 
   return (
-    <div className="search-container">
+    <section className="search-container">
       <form onSubmit={handleOnSubmit}>
         <input
           className="search"
@@ -32,6 +32,6 @@ export default function Search(props) {
           onChange={handleOnChange}
         />
       </form>
-    </div>
+    </section>
   );
 }
