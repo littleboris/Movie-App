@@ -8,7 +8,7 @@ const addFavourite = () => {
         type="button"
         xmlns="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALine-style-icons-heart.svg&psig=AOvVaw3EHZRCUbiI_QXOVVznZpvI&ust=1648540718131000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIilifOq6PYCFQAAAAAdAAAAABAD"
         width="2.4rem"
-        fill="red"
+        fill="white"
         viewBox="0 0 16 16"
         cursor="pointer"
       >
