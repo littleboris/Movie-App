@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <hr />
+        <hr className="hr-row" />
         <div className="row2">
           <p className="col-sm">
             &copy;{new Date().getFullYear()} Movies Inc | All rights deserve |

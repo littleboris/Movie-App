@@ -1,8 +1,8 @@
 import React from "react";
 import Movie from "./Movie";
-import "./styles/Featured.css";
+import "./styles/MovieList.css";
 
-export default function Featured(props) {
+export default function MovieList(props) {
   let content;
   let cantFind;
   // let contentStatus;

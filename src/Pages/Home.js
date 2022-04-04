@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Featured from "../components/Featured";
+import MovieList from "../components/MovieList";
 import MovieModal from "../components/MovieModal";
 import "../index.css";
 import Search from "../components/Navbar/Search";
-import { GlobalProvider } from "../context/GlobalState";
 import Footer from "../components/Footer";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
@@ -15,6 +14,7 @@ export default function App() {
   const modalCont = document.getElementById("modal-container");
   const [movies, setMovies] = useState([]);
   const [clickedMovie, setClickedMovie] = useState([]);
+
 
   function handleClickedMovie(
     title,
@@ -53,7 +53,7 @@ export default function App() {
       <Search getMovies={getMovies} />
       <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
       <section>
-        <Featured
+        <MovieList
           movies={movies}
           handleClickedMovie={handleClickedMovie}
           IMG_API={IMG_API}

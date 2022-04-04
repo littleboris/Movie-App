@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -7,9 +7,9 @@
 }
 
 #navbar-container {
-position: sticky;
-top: 0;
-z-index:1;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .menu-bars {
@@ -18,11 +18,11 @@ z-index:1;
   background: none;
   position: fixed;
   top: 1.4rem;
-  z-index: 2; 
+  z-index: 3;
 }
 
 .nav-menu {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -40,17 +40,17 @@ z-index:1;
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  padding: 8px 0px 8px 16px;
   list-style: none;
   height: 60px;
+  margin-bottom: 1.6rem;
 }
 
 .nav-text a {
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 18px;
+  font-size: 1.6rem;
   width: 95%;
   height: 100%;
   display: flex;
@@ -65,10 +65,11 @@ z-index:1;
 
 .nav-menu-items {
   width: 100%;
+  padding: 0;
 }
 
 .navbar-toggle {
-  background-color: #060b26;
+  background-color: #1d1d1d;
   width: 100%;
   height: 80px;
   display: flex;
@@ -78,4 +79,9 @@ z-index:1;
 
 span {
   margin-left: 16px;
+}
+
+#link-container svg {
+  width: 2.4rem;
+  height: auto;
 }

@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import Movie from "../components/Movie";
 import "../Pages/Watchlist.css";
+// import NavBar from "../components/Navbar/Navbar";
 
 export default function Watchlist() {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
 
-  console.log(watchlist);
+  console.log(watchlist.length);
   return (
     <article className="movie-page">
       <div className="container">
