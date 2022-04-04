@@ -34,22 +34,24 @@ const Movie = ({
 
   const watchlistDisabled = storedMovie ? true : false;
 
-  // Ska sättas till hjärtat: <div onClick={() => addMovieToWatchlist(title)} className="movie"></div>
-
   return (
     <main>
-      <div
-        className="movie"
-        onClick={() =>
-          addMovieToWatchlist({
-            title,
-            poster_path,
-            overview,
-            vote_average,
-            IMG_API,
-          })
-        }
-      >
+      <div className="movie">
+        <span id="favourite-btn">
+          <button
+            onClick={() => {
+              addMovieToWatchlist({
+                title,
+                poster_path,
+                overview,
+                vote_average,
+                IMG_API,
+              });
+            }}
+          >
+            {<AddFavourite />}
+          </button>
+        </span>
         <img
           onClick={() =>
             handleClickedMovie(title, poster_path, vote_average, overview)
@@ -70,7 +72,6 @@ const Movie = ({
         <div className="movie-over">
           <h2>{title}</h2>
           <p>{overview}</p>
-          <button id="favourite-btn">{<AddFavourite />}</button>
         </div>
       </div>
     </main>

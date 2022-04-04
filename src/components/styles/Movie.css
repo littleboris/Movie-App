@@ -17,7 +17,6 @@
 
 .movie:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 
 .movie-info {
@@ -42,6 +41,7 @@
   color: #d1d1d1;
   padding: 1rem;
   position: absolute;
+  z-index: 2;
   bottom: 0;
   left: 0;
   right: 0;
@@ -98,10 +98,26 @@
 }
 
 #favourite-btn {
+  cursor: pointer;
   position: absolute;
-  top: +5px;
+  top: 0;
   right: 0;
-  z-index: 5;
+  z-index: 1;
+  background-color: transparent;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+}
+
+#favourite-btn button {
   background: none;
   border: none;
+  padding-right: 1rem;
+}
+
+#favourite-btn button:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
 }
