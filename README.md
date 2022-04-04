@@ -1,6 +1,6 @@
 # Hello Corkix here!
 
-You are gonna need to install: npm react-router-dom & npm react-icons ,
+You are gonna need to npm install: react-router-dom & react-icons ,
 for the app to work properly
 
 Have a nice day!
