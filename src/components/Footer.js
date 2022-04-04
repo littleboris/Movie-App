@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Footer.css";
-
+import * as BsIcons from "react-icons/bs";
+import * as MdIcons from "react-icons/md";
 const Footer = () => {
   return (
     <footer className="main-footer">
@@ -19,9 +20,9 @@ const Footer = () => {
           <div className="col2">
             <h4>Social Media</h4>
             <ul className="list-unstyled">
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
+              <li><BsIcons.BsInstagram /> Instagram</li>
+              <li><BsIcons.BsTwitter /> Twitter</li>
+              <li><BsIcons.BsFacebook /> Facebook</li>
             </ul>
           </div>
 
@@ -29,9 +30,9 @@ const Footer = () => {
           <div className="col3">
             <h4>Contact</h4>
             <ul className="list-unstyled">
-              <li>Email: movie.inc@email.com</li>
-              <li>Tel: +123 456 789</li>
-              <li>Help</li>
+              <li><MdIcons.MdEmail /> Email: movie.inc@email.com</li>
+              <li><BsIcons.BsFillTelephoneFill /> Tel: +123 456 789</li>
+              <li><MdIcons.MdHelp /> Help</li>
             </ul>
           </div>
         </div>
