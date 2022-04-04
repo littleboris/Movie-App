@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import Movie from "../components/Movie";
 import "../Pages/Watchlist.css";
+import "../components/styles/Movie.css";
 // import NavBar from "../components/Navbar/Navbar";
 
 export default function Watchlist() {

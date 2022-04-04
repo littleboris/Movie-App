@@ -9,7 +9,7 @@
 #navbar-container {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1500;
 }
 
 .menu-bars {
@@ -18,7 +18,7 @@
   background: none;
   position: fixed;
   top: 1.4rem;
-  z-index: 3;
+  z-index: 1500;
 }
 
 .nav-menu {
@@ -31,6 +31,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 1500;
 }
 
 .nav-menu.active {

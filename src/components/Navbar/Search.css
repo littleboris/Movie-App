@@ -1,5 +1,5 @@
 .search {
-  position:fixed;
+  position: fixed;
   top: 1.2rem;
   right: 1rem;
   z-index: 2;
@@ -10,6 +10,7 @@
   background-color: rgba(116, 116, 116, 0.589);
   color: white;
   padding: 0.5rem 1.5rem;
+  z-index: 1500;
 }
 .search::-webkit-search-cancel-button {
   -webkit-appearance: none;
