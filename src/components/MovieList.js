@@ -5,7 +5,6 @@ import "./styles/MovieList.css";
 export default function MovieList(props) {
   let content;
   let cantFind;
-  // let contentStatus;
 
   if (props.movies.length > 0) {
     content = props.movies.map((movie) => (
@@ -27,8 +26,3 @@ export default function MovieList(props) {
     </section>
   );
 }
-
-//  {
-//         props.movies.length > 0 &&
-//           props.movies.map((movie) => <Movie key={movie.id} {...movie} />)
-//         }

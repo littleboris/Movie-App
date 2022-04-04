@@ -3,7 +3,8 @@ import { GlobalContext } from "../context/GlobalState";
 import Movie from "../components/Movie";
 import "../Pages/Watchlist.css";
 import "../components/styles/Movie.css";
-// import NavBar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer";
+//import NavBar from "../components/Navbar/Navbar";
 
 export default function Watchlist() {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
@@ -33,6 +34,12 @@ export default function Watchlist() {
           <h2 className="no-movies">No movies in your watchlist, add some!</h2>
         )}
       </div>
+      <footer>
+        <div className="page-container">
+          <div className="content-wrap"></div>
+        </div>
+        <Footer />
+      </footer>
     </article>
   );
 }
