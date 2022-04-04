@@ -7,7 +7,7 @@ import { IconContext } from "react-icons";
 
 
 export default function Navbar(props) {
-  console.log(props);
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
@@ -34,7 +34,7 @@ export default function Navbar(props) {
 
             {SidebarData.map((item, index) => {
               return (
-                <div id="link-container">
+                <div id="link-container" key={index}>
                   <li
                     onClick={reloadMainPage}
                     key={index}

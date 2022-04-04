@@ -6,7 +6,7 @@ const SEARCH_API =
 
 export default function Search(props) {
   const [searchTerm, setSearchTerm] = useState("");
-  console.log(props.getMovies);
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
 

@@ -15,7 +15,6 @@ export default function App() {
   const [movies, setMovies] = useState([]);
   const [clickedMovie, setClickedMovie] = useState([]);
 
-
   function handleClickedMovie(
     title,
     poster_path,
@@ -50,6 +49,7 @@ export default function App() {
   // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
     <main>
+
       <Search getMovies={getMovies} />
       <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
       <section>
