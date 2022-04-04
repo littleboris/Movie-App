@@ -19,11 +19,11 @@ const setVoteClass = (vote) => {
 
 export default function MovieModal(props) {
   const movie = props.movie;
-  const modalCont = document.getElementById("modal-container");
+  const modalContainer = document.getElementById("modal-container");
   console.log(movie.setVoteClass);
 
   const handleReturn = () => {
-    modalCont.style.display = "none";
+    modalContainer.style.display = "none";
   };
 
   return (

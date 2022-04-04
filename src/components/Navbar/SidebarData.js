@@ -1,6 +1,6 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
-import * as BiIcons from "react-icons/bi";
+import AddFavourite from "../Favourites/AddFavourite";
 
 export const SidebarData = [
   {
@@ -11,9 +11,9 @@ export const SidebarData = [
   },
 
   {
-    title: "Watchlist",
+    title: `Watchlist`,
     path: "/Watchlist",
-    icon: <BiIcons.BiCameraMovie />,
+    icon: <AddFavourite />,
     cName: "nav-text",
   },
 ];

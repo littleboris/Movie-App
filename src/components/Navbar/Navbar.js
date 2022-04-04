@@ -5,6 +5,7 @@ import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
 
+
 export default function Navbar(props) {
   console.log(props);
   const [sidebar, setSidebar] = useState(false);
@@ -33,12 +34,18 @@ export default function Navbar(props) {
 
             {SidebarData.map((item, index) => {
               return (
-                <li onClick={reloadMainPage} key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
+                <div id="link-container">
+                  <li
+                    onClick={reloadMainPage}
+                    key={index}
+                    className={item.cName}
+                  >
+                    <Link to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </li>
+                </div>
               );
             })}
           </ul>
