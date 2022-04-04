@@ -1,3 +1,12 @@
+# Hello Corkix here!
+
+You are gonna need to install: npm react-router-dom & npm react-icons ,
+for the app to work properly
+
+Have a nice day!
+
+// Corkix
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
