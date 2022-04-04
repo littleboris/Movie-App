@@ -7,7 +7,6 @@ import "../Pages/Watchlist.css";
 export default function Watchlist() {
   const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
 
-  console.log(watchlist.length);
   return (
     <article className="movie-page">
       <div className="container">

@@ -20,7 +20,6 @@ export const GlobalProvider = (props) => {
   useEffect(() => {
     localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
     localStorage.setItem("watched", JSON.stringify(state.watched));
-    console.log(state);
   }, [state]);
 
   //Actions, title instead of movie??
