@@ -7,13 +7,13 @@ export const SidebarData = [
     title: "Home",
     path: "/",
     icon: <AiIcons.AiFillHome />,
-    cName: "nav-text",
+    cName: "nav-text1",
   },
 
   {
-    title: `Watchlist`,
+    title: "Watchlist",
     path: "/Watchlist",
     icon: <AddFavourite />,
-    cName: "nav-text",
+    cName: "nav-text2",
   },
 ];

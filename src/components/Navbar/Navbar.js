@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
+import { GlobalContext } from "../../context/GlobalState";
 
-
-export default function Navbar(props) {
+export default function Navbar() {
+  const { watchlist, removeMovieFromWatchlist } = useContext(GlobalContext);
+  let watchAmount = watchlist.length;
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
@@ -43,6 +45,7 @@ export default function Navbar(props) {
                     <Link to={item.path}>
                       {item.icon}
                       <span>{item.title}</span>
+                      <p>({watchAmount})</p>
                     </Link>
                   </li>
                 </div>
