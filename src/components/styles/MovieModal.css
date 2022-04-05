@@ -10,15 +10,15 @@
   align-items: center;
 }
 
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  border-radius: 1rem;
-}
-
 #movie-modal {
   height: 90vh;
   width: 80vw;
+  border-radius: 1rem;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
   border-radius: 1rem;
 }
 

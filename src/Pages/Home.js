@@ -11,7 +11,6 @@ const FEATURED_API =
   "https://api.themoviedb.org/3/discover/movie?api_key=7dd175e8e4c6252ca5cf5e63ea198b53&language=en-US&sort_by=popularity.desc&";
 
 export default function App() {
-  const modalCont = document.getElementById("modal-container");
   const [movies, setMovies] = useState([]);
   const [clickedMovie, setClickedMovie] = useState([]);
 
@@ -22,6 +21,7 @@ export default function App() {
     overview,
     setVoteClass
   ) {
+    const modalCont = document.getElementById("modal-container");
     setClickedMovie({
       title: title,
       poster_path: poster_path,
@@ -31,8 +31,7 @@ export default function App() {
     });
     modalCont.style.display = "flex";
   }
-  // MovieFavorite part
-  //
+
   useEffect(() => {
     getMovies(FEATURED_API);
   }, []);
@@ -45,11 +44,8 @@ export default function App() {
       });
   };
 
-  // Det jag vill ska renderas ut deklarerar jag här till components, och använder mig av props i components
-  // Exempelvis, i Search.js säger jag att det kommer finnas en variabel i props som heter "getMovies"
   return (
     <main>
-
       <Search getMovies={getMovies} />
       <MovieModal movie={clickedMovie} IMG_API={IMG_API} />
       <section>
