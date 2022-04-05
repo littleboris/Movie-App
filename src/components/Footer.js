@@ -5,7 +5,7 @@ import * as MdIcons from "react-icons/md";
 const Footer = () => {
   return (
     <footer className="main-footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="row">
           {/* Colum1 */}
           <div className="col1">
