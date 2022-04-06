@@ -6,7 +6,7 @@ import { GlobalProvider } from "./context/GlobalState";
 
 export default function App() {
   return (
-    //Always wrap GlobalProvider in app.js and not in components
+
     <GlobalProvider>
       <Router>
         <Navbar />

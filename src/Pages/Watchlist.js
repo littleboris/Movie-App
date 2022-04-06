@@ -30,13 +30,10 @@ export default function Watchlist() {
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">No movies in your watchlist, add some!</h2>
+          <h4 className="no-movies">No movies in your watchlist, add some!</h4>
         )}
       </div>
       <footer>
-        <div className="page-container">
-          <div className="content-wrap"></div>
-        </div>
         <Footer />
       </footer>
     </article>

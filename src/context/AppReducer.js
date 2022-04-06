@@ -1,4 +1,6 @@
 export default (state, action) => {
+  // uses the action object and performs a state update, returning the new state.
+  //Checks if the state has been changed, if it differs it updates with the new value
   switch (action.type) {
     case "ADD_MOVIE_TO_WATCHLIST":
       // action.payload Is the movie i click on

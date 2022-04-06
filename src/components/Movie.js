@@ -30,10 +30,6 @@ const Movie = ({
 }) => {
   const { addMovieToWatchlist, watchlist } = useContext(GlobalContext);
 
-  let storedMovie = watchlist.find((o) => o.id === title.id);
-
-  const watchlistDisabled = storedMovie ? true : false;
-
   return (
     <main>
       <div className="movie">
@@ -79,16 +75,3 @@ const Movie = ({
 };
 
 export default Movie;
-
-/* <p id="addInfo">Add this movie to your watchlist!</p> */
-
-// #addInfo {
-//   background-color: rgba(68, 68, 68, 0.804);
-//   font-size: 0.5rem;
-//   width: 4rem;
-//   margin-right: 0.8rem;
-//   margin-top: 4.6rem;
-//   text-align: center;
-//   position: inherit;
-//   display: none;
-// }
